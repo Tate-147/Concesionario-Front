@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import logo from "../img/logo.png";
+import logo from "../img/Logo.png";
 
 const Header = () => {
   const { isLogged, setIsLogged, userId, setUserId, setAccessToken, setRefreshToken } = useContext(AuthContext);
