@@ -1,0 +1,689 @@
+:root{ /*Color constants*/
+  --primary: #0081ba;
+  --secondary: #00618b;
+  --white: #fff;
+  --black: #000;
+  --home: ;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+
+.contenedorNav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 20px;
+}
+
+.link{
+  color: var(--white);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.link:hover{
+  background-color: var(--secondary);
+  color: var(--white);
+  border-radius: 10px;
+}
+
+/* Home */
+
+.home{
+  background: url(./../img/home.jpeg) no-repeat bottom center;
+  background-size: cover;
+  padding: 0 15% 0 15%;
+  text-align: center;
+}
+
+.home h3{
+  margin: 0;
+  color:var(--white);
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.home img{
+  width: 100%;
+}
+
+/* Home 2*/
+
+.home2{
+  background-image: url(./../img/background.svg);
+  background-repeat: repeat; 
+}
+
+.home2 .btn{
+  width: 33%;
+  height: 45px;  
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  margin: 10px 33% 30px 33%;
+}
+
+/* Services */
+
+.services{
+  background: #f1f1f1;
+  text-align: center;
+}
+.services h1{
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: 4px solid #3498db;
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+.cen{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+.service{
+  display: inline-block;
+  width: calc(100% / 3);
+  margin: 0 -2px;
+  padding: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.service:hover{
+  background: #ddd;
+}
+.service i{
+  color: #3498db;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+.service h2{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+}
+.service p{
+  color: gray;
+  font-size: 15px;
+  font-weight: 500;
+}
+@media screen and (max-width: 800px) {
+  .service{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .service{
+    width: 100%;
+  }
+}
+
+/* Cars */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.childcontainer {
+  flex: 1 0 21%; /* explanation below */
+  margin: 5px;
+  height: 100px;
+}
+
+.pagination{
+  margin: auto 40%;
+  display: grid; /* to use css-grid */
+  grid-template-columns: 1fr 1fr 1fr; /* creates 2 columns */
+
+}
+
+.pagination-item{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center; 
+}
+
+/* Car */
+
+.carcontainer{
+  max-width: 500px;
+  margin: 30px auto;
+  box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: var(--white);
+}
+
+.carimg{
+  height: 300px;
+  width: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carcontainer button{
+  width: 100%;
+  height: 45px;
+  border-radius: 40px;
+  border: 2px solid rgba(0, 0, 0, .5);
+  font-size: 16px;
+}
+
+.carcontainer button:hover{
+  cursor: pointer;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 40px;
+  border: 2px solid rgba(0, 0, 0, .2);
+}
+
+/* Read Car */
+
+.readcar{
+  padding: 30px;
+  background-image: url(./../img/background.svg);
+  background-repeat: repeat; 
+}
+
+.readcar h1{
+  margin: 0;
+  text-align: left;
+}
+
+.readcarimg{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.readcarcontainer{
+  display: grid; /* to use css-grid */
+  grid-template-columns: 1fr 1fr 1fr; /* creates 2 columns */
+  gap: 20px; /* creates a gap between the columns and rows */
+  margin: 50px;
+  box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--white);
+}
+
+/* List Car */
+
+.listcars{
+  padding: 30px;
+  background-image: url(./../img/background.svg);
+  background-repeat: repeat; 
+}
+
+.listcars h1{
+  margin: 0;
+  text-align: left;
+}
+
+.filters{
+  margin: auto 30%;
+  display: grid; /* to use css-grid */
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* creates 4 columns */
+
+}
+
+.filters h2{
+  grid-column: span 4;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.filter-item input, select{
+  width: 80%;
+  height: 45px;
+  border-radius: 40px;
+  border: 2px solid rgba(0, 0, 0, .2);
+  padding: 0px 0px 0px 20px;
+  font-size: 16px;
+}
+
+.filter-item button{
+  width: 88%;
+  height: 45px;
+  border-radius: 40px;
+  border: 2px solid rgba(0, 0, 0, .5);
+  font-size: 16px;
+}
+
+.filter-item button:hover{
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 2px solid rgba(0, 0, 0, .2);
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  min-height: 100px;
+  padding: 20px 50px;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 5px;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.icon-elem {
+  list-style: none;
+}
+
+.icon {
+  color: var(--white);
+  font-size: 32px;
+  display: inline-block;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  transform: translateY(-10px);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.menu-elem {
+  list-style: none;
+}
+
+.menu-icon {
+  color: var(--white);
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+}
+
+.text {
+  color: var(--white);
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* Login */
+
+.containerlogin{ 
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("./../img/background-car.jpg") no-repeat center;
+  background-size: cover;
+  
+}
+
+.wrapper{
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.wrapper h1{
+  font-size: 36px;
+  text-align: center;
+}
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0px 30px 0px;
+}
+
+.input-box input{
+  width: 95%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0px 0px 0px 20px;
+}
+
+.input-box input::placeholder{
+  color: #fff;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.wrapper .remember-forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot label input{
+  accent-color: #fff;
+  margin-right: 3px;
+}
+
+.remember-forgot a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+
+.wrapper .btn{
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  margin: 30px 0px 30px 0px;
+}
+
+.wrapper .register-link{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+
+}
+
+.register-link p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover{
+  text-decoration: underline;
+}
+
+/* Register */
+
+.containerregister{ 
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("./../img/background-car.jpg") no-repeat center;
+  background-size: cover;
+  
+}
+
+.wrapper2{
+  width: 900px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.wrapper2 h1{
+  font-size: 36px;
+  text-align: center;
+}
+.wrapper2 .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0px 30px 0px;
+}
+
+.formregister{
+  display: grid; /* to use css-grid */
+  grid-template-columns: 1fr 1fr 1fr; /* creates 2 columns */
+  gap: 20px; /* creates a gap between the columns and rows */
+}
+
+.formregister h1, button{
+  grid-column: span 3;
+}
+
+.input-box-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box-column input{
+  width: 95%;
+  height: 45px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0px 0px 0px 20px;
+}
+
+.input-box-column input[type="date"]::-webkit-calendar-picker-indicator {filter: invert(1); font-size: 20px; padding-right: 20px;} 
+
+.input-box-column input::placeholder{
+  color: #fff;
+}
+
+.input-box-column i {
+  position: absolute;
+  margin-left: 255px;
+  margin-top: 14px;
+  font-size: 20px;
+}
+
+.wrapper2 .btn{
+  width: 33%;
+  height: 45px;  
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  margin: 30px auto 30px auto;
+}
+
+/* Create Car */
+
+.containercreatecar{ 
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("./../img/background-car.jpg") no-repeat center;
+  background-size: cover;
+  
+}
+
+.wrapper3{
+  width: 900px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.wrapper3 h1{
+  font-size: 36px;
+  text-align: center;
+}
+.wrapper3 .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0px 30px 0px;
+}
+
+.formcreatecar{
+  display: grid; /* to use css-grid */
+  grid-template-columns: 1fr 1fr 1fr; /* creates 2 columns */
+  gap: 20px; /* creates a gap between the columns and rows */
+}
+
+.formcreatecar h1, span, button{
+  grid-column: span 3;
+}
+
+.input-box-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box-column input{
+  width: 95%;
+  height: 45px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0px 0px 0px 20px;
+}
+
+.input-box-column input::placeholder{
+  color: #fff;
+}
+
+.input-box-column i {
+  position: absolute;
+  margin-left: 255px;
+  margin-top: 14px;
+  font-size: 20px;
+}
+
+.input-box-column2{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box-column2 input{
+  width: 98.5%;
+  height: 45px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0px 0px 0px 20px;
+}
+
+.input-box-column2 input::placeholder{
+  color: #fff;
+}
+
+.input-box-column2 i {
+  position: absolute;
+  margin-left: 869px;
+  margin-top: 14px;
+  font-size: 20px;
+}
+
+.wrapper3 .btn{
+  width: 33%;
+  height: 45px;  
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  margin: 30px auto 30px auto;
+}
