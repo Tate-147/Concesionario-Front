@@ -1,4 +1,4 @@
-# Proyecto de Programación Web - Aplicación SPA con React
+# Proy. de Programación Web - Aplicación SPA con React
 
 Esta es una aplicación web desarrollada como trabajo práctico integrador en el marco de la asignatura de Programación Web. La aplicación es una SPA (Single Page Application) construida en React y permite realizar un CRUD completo sobre dos entidades:
 una entidad principal y una entidad de soporte.
@@ -25,13 +25,14 @@ Elegimos como proyecto el diseño de una página web para un concesionario de co
       <Header/>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/logout' element={<Logout />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/cars/:idcar' element={<ReadCar />} />
-        <Route path='/createcar' element={<CreateCar />} />
-        <Route path='/updatecar/:idcar' element={<UpdateCar />} />
+        <Route path='/users/create' element={<CreateUser />} />
+        <Route path='/users/update/:id' element={<UpdateUser />} />
+        <Route path='/users/login' element={<Login />} />
+        <Route path='/cars' element={<ListCars />} />
+        <Route path='/mycars' element={<MyCars />} />
+        <Route path='/cars/:id' element={<ReadCar />} />
+        <Route path='/cars/create' element={<CreateCar />} />
+        <Route path='/cars/update/:id' element={<UpdateCar />} />
       </Routes>
       <Footer/>
     </BrowserRouter>
@@ -59,7 +60,7 @@ Elegimos como proyecto el diseño de una página web para un concesionario de co
 
 ## Estructura del Proyecto 📄
 
-{foto de los directorios}
+![Estructura del proyecto](/src/img/Estructura.jpg "Estructura del Proyecto.")
 
 ## Instrucciones de Uso 🔧
 
@@ -94,7 +95,9 @@ Para iniciar un servidor de desarrollo
 
 ## Imágenes de la aplicación
 
-![This is an alt text.](/image/sample.webp "This is a sample image.")
+![Página Home](/src/img/HomeC.jpg "Página Home")
+![Página Vehículos](/src/img/Vehiculos.jpg "Página Vehículos")
+![Página Login](/src/img/Login.jpg "Página Login")
 
 ## Contribuidores ✒️
 

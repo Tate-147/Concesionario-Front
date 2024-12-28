@@ -113,7 +113,9 @@ const Cars = ( { filters } ) => {
 
     if (isLoading) {
         return (
-            <div>Cargando...</div>
+            <div className="loader">
+                <div className="loading" id="loading"/>
+            </div>
         )
     }
 

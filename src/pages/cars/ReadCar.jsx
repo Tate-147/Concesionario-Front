@@ -6,6 +6,7 @@ const ReadCar = () => {
     const { id } = useParams();
     const [car, setCar] = useState({});
     const [user, setUser] = useState({});
+    const [isLoading,setIsLoading] = useState(true);
     
     useEffect(() => {
         const fetchCar = async () => {
@@ -13,35 +14,39 @@ const ReadCar = () => {
             const responsejson = await response.json();
             setCar(responsejson.data);
             setUser(responsejson.data.user);
+            setIsLoading(false);
         }
         fetchCar();
         
     },[])
     
+    if (isLoading) {
+        return (
+            <div className="loader">
+                <div className="loading" id="loading"/>
+            </div>
+        )
+    }
+
     return (
         <div className="readcar">
             <h1>Detalle de la publicación</h1>
             <div className="readcarcontainer">
-            <img src={car.urlToImage} alt={car.brand} className="readcarimg"/>
+                <img src={car.urlToImage} alt={car.brand} className="readcarimg"/>
             <div>
-                <h2>{car.brand}, {car.model}</h2>
-                <h3>{car.year}</h3>
-                <h4>{car.color}</h4>
-                <h1>{car.price}</h1>
+                <h1>{car.brand}, {car.model}</h1>
+                <h2>{car.year}</h2>
+                <h3>{car.color}</h3>
+                <h1>$ {car.price}</h1>
                 <p>{car.description}</p>
             </div>
             <div>
-                <h2>{user.lastname}, {user.name}</h2>
-                <h3>{user.birthdate}</h3>
-                <h4>{user.addressname}</h4>
-                <h4>{user.addressnumber}</h4>
-                <h4>{user.postcode}</h4>
-                <h4>{user.city}</h4>
-                <h4>{user.province}</h4>
-                <h4>{user.country}</h4>
-                <h4>{user.phone}</h4>
-                <h4>{user.cellphone}</h4>
-                <h4>{user.email}</h4>
+                <h1><i className='bx bxs-user'></i> {user.lastname}, {user. name}</h1>
+                <h2><i className='bx bxs-home'></i> {user.addressname}, {user.addressnumber} ({user.postcode})</h2>
+                <h3><i className='bx bxs-map'></i> {user.city}, {user.province}, {user.country}</h3>
+                <h1><i className='bx bxs-phone'></i> {user.phone}</h1>
+                <h2><i className='bx bxs-phone'></i> {user.cellphone}</h2>
+                <h3><i className='bx bxs-envelope'></i> {user.email}</h3>
             </div>
         </div>
         </div>

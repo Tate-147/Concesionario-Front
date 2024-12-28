@@ -21,7 +21,6 @@ function App() {
         <Route path='/users/create' element={<CreateUser />} />
         <Route path='/users/update/:id' element={<UpdateUser />} />
         <Route path='/users/login' element={<Login />} />
-
         <Route path='/cars' element={<ListCars />} />
         <Route path='/mycars' element={<MyCars />} />
         <Route path='/cars/:id' element={<ReadCar />} />
